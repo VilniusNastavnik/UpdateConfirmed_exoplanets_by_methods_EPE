@@ -330,7 +330,7 @@ ax.tick_params(axis="both", which="both", top=False)
 
 # Target: width="1080pt" height="720pt" viewBox="0 0 1080 720"
 # Points == pixels at 72 dpi for SVG; matplotlib uses inches so: 1080pt / 72 = 15in
-OUT = "exoplanets_by_method.svg"
+OUT = "Confirmed exoplanets by methods EPE.svg"
 fig.set_size_inches(1080 / 72, 720 / 72)
 plt.tight_layout()
 plt.savefig(OUT, format="svg", dpi=72, bbox_inches="tight",
