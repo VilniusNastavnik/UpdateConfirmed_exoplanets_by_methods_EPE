@@ -26,9 +26,3 @@ Dependencies
   requests  – to fetch the CSV
   pandas    – to clean and pivot data
   matplotlib – to draw and export SVG
-
-Filter applied:
-((mass:mjup<13 AND mass:mearth>0.05)
-OR (mass=null AND Not radius = null)
-OR (mass=null AND mass_sini:mjup < 13))
-AND Not star_name = null
