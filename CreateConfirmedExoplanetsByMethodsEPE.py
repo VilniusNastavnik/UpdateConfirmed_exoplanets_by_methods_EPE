@@ -41,9 +41,14 @@ warnings.filterwarnings("ignore")
 URL = "http://exoplanet.eu/catalog/csv/"
 
 print("Fetching data from exoplanet.eu …")
-response = requests.get(URL, timeout=60, headers={"User-Agent": "Mozilla/5.0"})
-response.raise_for_status()
-raw = response.text
+raw = ""
+try:
+    response = requests.get(URL, timeout=60, headers={"User-Agent": "Mozilla/5.0"})
+    response.raise_for_status()
+    raw = response.text
+  
+except requests.exceptions.Timeout:
+    print("Errore: il server non ha risposto entro il timeout")
 
 # Dump raw response to file for inspection
 RAW_OUT = "exoplanet_eu_raw.csv"
