@@ -7,10 +7,10 @@ Data source : https://exoplanet.eu/catalog/csv/
               (The Extrasolar Planets Encyclopaedia – EPE)
 
 Filters applied:
-  • status  == "Confirmed"
-  • detection_type is not null / empty
-  • discovered (year) is not null
-  • ((mass:mjup<13 AND mass:mearth>0.05)
+  * status  == "Confirmed"
+  * detection_type is not null / empty
+  * discovered (year) is not null
+  * ((mass:mjup<13 AND mass:mearth>0.05)
     OR (mass=null AND Not radius = null)
     OR (mass=null AND mass_sini:mjup < 13))
     AND Not star_name = null
